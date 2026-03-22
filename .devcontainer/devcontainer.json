@@ -1,0 +1,15 @@
+{
+  "name": "Laravel Codespace",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {}
+  },
+  "postStartCommand": "sudo service mysql start && sudo service mysql status && sudo chmod 755 /var/run/mysqld && sudo chmod 666 /var/run/mysqld/mysqld.sock && mysql -u root -h 127.0.0.1 -P 3306 -e 'SELECT 1';",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "amiralizadeh9480.laravel-extra-intellisense"
+      ]
+    }
+  }
+}
